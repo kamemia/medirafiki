@@ -13,7 +13,6 @@ export const  Hero = () => {
                     {/* Add Hero Images Here */}
                     <Image
                         src="/medicine.jpg"
-                        
                         className="hidden md:block"
                         alt="Medicine"
                     />
