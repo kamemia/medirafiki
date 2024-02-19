@@ -15,7 +15,7 @@ Discover your ideal contraceptive Method. We simplify the journey to finding you
 - [Framer Motion](https://www.framer.com/motion/)
 - [next-themes](https://github.com/pacocoursey/next-themes)
 
-## How to Contribute
+## How to Install
 
 
 ### Use the template with create-next-app
