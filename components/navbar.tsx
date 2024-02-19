@@ -44,7 +44,7 @@ export const Navbar = () => {
 					<p className="font-bold text-inherit">Medirafiki</p>
 				</NextLink>
 			</NavbarBrand>
-			<NavbarContent className="basis-1/5 sm:basis-full" justify="center">	
+			{/* <NavbarContent className="basis-1/5 sm:basis-full" justify="center">	
 				<Dropdown>
 					<NavbarItem>
 						<DropdownTrigger>
@@ -68,7 +68,7 @@ export const Navbar = () => {
 						
 					</DropdownMenu>
 				</Dropdown>
-			</NavbarContent>
+			</NavbarContent> */}
 
 		</NextUINavbar>
 	);
