@@ -7,6 +7,7 @@ import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about-us";
+import { Benefits } from "@/components/benefits";
 
 export default function Home() {
 	return (
@@ -15,6 +16,10 @@ export default function Home() {
 		</section>
 		<section>
 			<About/>
-		</section></>
+		</section>
+		<section>
+			<Benefits/>
+		</section>
+		</>
 	);
 }

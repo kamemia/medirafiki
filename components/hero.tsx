@@ -1,4 +1,3 @@
-import { Link } from "@nextui-org/link"
 import { Image } from "@nextui-org/image"
 
 export const  Hero = () => {
@@ -16,15 +15,9 @@ export const  Hero = () => {
                         src="/medicine.jpg"
                         
                         className="hidden md:block"
-                        alt="Screenshots of the dashboard project showing desktop version"
+                        alt="Medicine"
                     />
-                    <Image
-                        src="/hero-mobile.png"
-                        width={560}
-                        height={620}
-                        className="block md:hidden"
-                        alt="Screenshot of the dashboard project showing mobile version"
-                    />
+                    
                 </div>
             </div>
          </main>
