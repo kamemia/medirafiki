@@ -7,26 +7,20 @@ import {
 	NavbarBrand,
 	NavbarItem,
 	NavbarMenuItem,
-	
-	// DropdownItem,
-	// Dropdown,
-	// DropdownTrigger
 } from "@nextui-org/navbar";
-import React from "react";
 import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
-import { FaChevronDown } from "react-icons/fa";
 
 import { link as linkStyles } from "@nextui-org/theme";
 
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
 import clsx from "clsx";
-import {  Dropdown,  DropdownTrigger,  DropdownMenu,  DropdownSection,  DropdownItem} from "@nextui-org/dropdown";
 
 import { ThemeSwitch } from "@/components/theme-switch";
+import { FaChevronDown } from "react-icons/fa";
 import {
 	TwitterIcon,
 	GithubIcon,
@@ -34,25 +28,34 @@ import {
 	HeartFilledIcon,
 	
 } from "@/components/icons";
-
+import {  Dropdown,  DropdownTrigger,  DropdownMenu,  DropdownSection,  DropdownItem} from "@nextui-org/dropdown";
 import { Logo } from "@/components/icons";
 
 export const Navbar = () => {
 	return (
-		<NextUINavbar maxWidth="xl" position="sticky" className="bg-white-50 shadow-md ">
-			<NavbarBrand as="li" className="gap-3 max-w-fit">
-				<NextLink className="flex justify-start items-center gap-1" href="/">
-					<Logo />
-					<p className="font-bold text-inherit">Medirafiki</p>
-				</NextLink>
-			</NavbarBrand>
-			<NavbarContent className="ml-[450px]">
-				<NavbarItem>
-					<Link href="/blog" className="font-bold text-black">
-						Criteria Wheel
-					</Link>
-				</NavbarItem>
-				<Dropdown
+		<NextUINavbar maxWidth="xl" position="sticky">
+			<NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+				<NavbarBrand as="li" className="gap-3 max-w-fit">
+					<NextLink className="flex justify-start items-center gap-1" href="/">
+						<Logo />
+						<p className="font-bold text-inherit">Medirafiki</p>
+					</NextLink>
+				</NavbarBrand>
+				<ul className="hidden lg:flex gap-4 justify-start ml-2">
+					
+						<NavbarItem key="family planning">
+							<NextLink
+								className={clsx(
+									linkStyles({ color: "foreground" }),
+									"data-[active=true]:text-primary data-[active=true]:font-medium"
+								)}
+								color="foreground"
+								href="/blog"
+							>
+								Family planning
+							</NextLink>
+						</NavbarItem>
+						<Dropdown
 					showArrow
 					classNames={{
 						base: "before:bg-default-200", // change arrow background
@@ -79,8 +82,49 @@ export const Navbar = () => {
 						<DropdownItem key="View more" href="/blog">View more</DropdownItem>
 					</DropdownMenu>
 				</Dropdown>
-				
+					
+				</ul>
 			</NavbarContent>
+
+			<NavbarContent
+				className="hidden sm:flex basis-1/5 sm:basis-full"
+				justify="end"
+			>
+				<NavbarItem className="hidden sm:flex gap-2">
+					<ThemeSwitch />
+				</NavbarItem>
+			</NavbarContent>
+
+			<NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
+				<Link isExternal href={siteConfig.links.github} aria-label="Github">
+					<GithubIcon className="text-default-500" />
+				</Link>
+				<ThemeSwitch />
+				<NavbarMenuToggle />
+			</NavbarContent>
+
+			<NavbarMenu>
+				
+				<div className="mx-4 mt-2 flex flex-col gap-2">
+					{siteConfig.navMenuItems.map((item, index) => (
+						<NavbarMenuItem key={`${item}-${index}`}>
+							<Link
+								color={
+									index === 2
+										? "primary"
+										: index === siteConfig.navMenuItems.length - 1
+										? "danger"
+										: "foreground"
+								}
+								href="#"
+								size="lg"
+							>
+								{item.label}
+							</Link>
+						</NavbarMenuItem>
+					))}
+				</div>
+			</NavbarMenu>
 		</NextUINavbar>
 	);
 };
