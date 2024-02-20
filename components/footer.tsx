@@ -18,23 +18,23 @@ export const Footer = () => {
                 <Divider orientation="vertical"/>
                 <div className="flex flex-col mt-4 md:w-1/3 ">
                     <h1 className="text-2xl font-bold mb-2">Quick Links</h1>
-                    <p>Home</p>
-                    <p>Who we are</p>
-                    <p>Our Philosophy</p>
+                    <Link href="/">Home</Link>
+                    <Link href="/">Who we are</Link>
+                    <Link href="/">Our philosophy</Link>
                 </div>
                 <Divider orientation="vertical"/>
                 <div className="flex flex-col mt-4 md:w-1/4 ">
                     <h1 className="text-2xl font-bold mb-2">Contact us</h1>
-                    <p>+254748674860 / +254700779399 /+254758061525</p>
-                    <p>info@medirafiki.ourjamii.com</p>
+                    <p>+254748674860 / +254700779399</p>
+                    <Link href="mailto:info@medirafiki.ourjamii.com">info@medirafiki.ourjamii.com</Link>
                     <p>Nakuru, Kenya</p>
                 </div>
                 <Divider orientation="vertical"/>
                 <div className="flex flex-col mt-4 md:w-1/4 mr-[80px]">
                     <h1 className="text-2xl font-bold mb-2">Social</h1>
-                    <p>Twitter</p>
-                    <p>Facebook</p>
-                    <p>LinkedIn</p>
+                    <Link href="https://twitter.com">Twitter</Link>
+                    <Link href="https://facebook.com">Facebook</Link>
+                    <Link href="https://linkedin.com">LinkedIn</Link>
                 </div>
             </div>
          </main>

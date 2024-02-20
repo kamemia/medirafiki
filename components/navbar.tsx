@@ -17,6 +17,7 @@ import { Button } from "@nextui-org/button";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import { Input } from "@nextui-org/input";
+import { FaChevronDown } from "react-icons/fa";
 
 import { link as linkStyles } from "@nextui-org/theme";
 
@@ -45,24 +46,40 @@ export const Navbar = () => {
 					<p className="font-bold text-inherit">Medirafiki</p>
 				</NextLink>
 			</NavbarBrand>
-			<NavbarContent>
-				<Dropdown>
+			<NavbarContent className="ml-[450px]">
+				<NavbarItem>
+					<Link href="/blog" className="font-bold text-black">
+						Criteria Wheel
+					</Link>
+				</NavbarItem>
+				<Dropdown
+					showArrow
+					classNames={{
+						base: "before:bg-default-200", // change arrow background
+						content: "py-1 px-1 border border-default-200 bg-gradient-to-br from-white to-default-200 dark:from-default-50 dark:to-black",
+					}}
+					>
 					<NavbarItem>
 						<DropdownTrigger>
-						<Button>Features</Button>
+						<Button
+							disableRipple
+							className="p-0 bg-transparent data-[hover=true]:bg-transparent font-bold"
+							radius="sm"
+							endContent={<FaChevronDown />}
+							variant="light"
+						>
+							Family planning methods</Button>
 						</DropdownTrigger>
 					</NavbarItem>
-					<DropdownMenu>
-						<DropdownItem key="hello" description="hello">Hello</DropdownItem>
-						<DropdownItem key="hello" description="hello">Hello</DropdownItem>
-						<DropdownItem key="hello" description="hello">Hello</DropdownItem>
+					<DropdownMenu className="flex flex-col">
+						<DropdownItem className="flex" key="oral contraceptives">Oral contraceptives</DropdownItem>
+						<DropdownItem key="breastfeeding">Breastfeeding</DropdownItem>
+						<DropdownItem key="withdrawal">Withdrawal</DropdownItem>
+						<DropdownItem key="Cervical caps" >Cervial caps</DropdownItem>
+						<DropdownItem key="View more" href="/blog">View more</DropdownItem>
 					</DropdownMenu>
 				</Dropdown>
-				<NavbarItem isActive>
-					<Link href="#" aria-current="page">
-						Customers
-					</Link>
-        		</NavbarItem>
+				
 			</NavbarContent>
 		</NextUINavbar>
 	);
