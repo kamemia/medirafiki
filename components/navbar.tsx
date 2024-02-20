@@ -52,7 +52,7 @@ export const Navbar = () => {
 								color="foreground"
 								href="/blog"
 							>
-								Family planning
+								Eligibility Criteria
 							</NextLink>
 						</NavbarItem>
 						<Dropdown
@@ -116,7 +116,7 @@ export const Navbar = () => {
 										? "danger"
 										: "foreground"
 								}
-								href="#"
+								href={item.href}
 								size="lg"
 							>
 								{item.label}

@@ -23,20 +23,29 @@ export const siteConfig = {
     {
       label: "About",
       href: "/about",
-    }
+    },
+	
+	{
+		label: "Eligibility Criteria",
+		href: "/blog",
+	},
+	{
+		label: "Family planning methods",
+		href: "/blog",
+	},
 	],
 	navMenuItems: [
 		{
-			label: "Profile",
-			href: "/profile",
+			label: "Home",
+			href: "/",
 		},
 		{
-			label: "Dashboard",
-			href: "/dashboard",
+			label: "Eligibility Criteria",
+			href: "/blog",
 		},
 		{
-			label: "Projects",
-			href: "/projects",
+			label: "Family planning methods",
+			href: "/blog",
 		},
 		{
 			label: "Team",
