@@ -1,3 +1,4 @@
+'use client'
 import {
 	Navbar as NextUINavbar,
 	NavbarContent,
@@ -44,32 +45,25 @@ export const Navbar = () => {
 					<p className="font-bold text-inherit">Medirafiki</p>
 				</NextLink>
 			</NavbarBrand>
-			{/* <NavbarContent className="basis-1/5 sm:basis-full" justify="center">	
+			<NavbarContent>
 				<Dropdown>
 					<NavbarItem>
 						<DropdownTrigger>
-							<Button
-								disableRipple
-								className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-								// endContent={icons.chevron}
-								radius="sm"
-								variant="light"
-							>
-								Family Planning Methods
-							</Button>
+						<Button>Features</Button>
 						</DropdownTrigger>
 					</NavbarItem>
 					<DropdownMenu>
-						<DropdownItem key="1">Combined Oral contraceptives</DropdownItem>
-						<DropdownItem key="2">Combined Oral contraceptives</DropdownItem>
-						<DropdownItem key="3">Combined Oral contraceptives</DropdownItem>
-						<DropdownItem key="4">Combined Oral contraceptives</DropdownItem>
-						<DropdownItem key="5">Combined Oral contraceptives</DropdownItem>
-						
+						<DropdownItem key="hello" description="hello">Hello</DropdownItem>
+						<DropdownItem key="hello" description="hello">Hello</DropdownItem>
+						<DropdownItem key="hello" description="hello">Hello</DropdownItem>
 					</DropdownMenu>
 				</Dropdown>
-			</NavbarContent> */}
-
+				<NavbarItem isActive>
+					<Link href="#" aria-current="page">
+						Customers
+					</Link>
+        		</NavbarItem>
+			</NavbarContent>
 		</NextUINavbar>
 	);
 };
