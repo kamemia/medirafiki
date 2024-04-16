@@ -8,6 +8,7 @@ import { GithubIcon } from "@/components/icons";
 import { Hero } from "@/components/hero";
 import { About } from "@/components/about-us";
 import { Benefits } from "@/components/benefits";
+import { CardInfo } from "@/components/card";
 
 export default function Home() {
 	return (
@@ -19,6 +20,9 @@ export default function Home() {
 		</section>
 		<section>
 			<Benefits/>
+		</section>
+		<section>
+			<CardInfo/>
 		</section>
 		</>
 	);
